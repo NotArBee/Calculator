@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_operation"
+        style="@style/TextInOperation.GreyText"
+        android:layout_width="379dp"
+        android:gravity="center"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        style="@style/TextInOperation.WhiteText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_operation" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/TextInButton.Button.Red_Text"
+                android:text="@string/Clear"
+                android:onClick="onClear"/>
+
+            <Button
+                android:id="@+id/btn_modulo"
+                style="@style/TextInButton.Button.GreyText"
+                android:text="@string/modulo" />
+
+            <Button
+                android:id="@+id/btn_divide"
+                style="@style/TextInButton.Button.GreyText"
+                android:text="@string/divide" />
+
+            <ImageButton
+                android:id="@+id/btn_delete"
+                style="@style/TextInButton.Button"
+                android:backgroundTint="@color/secondary"
+                android:src="@drawable/delete_icon"
+                app:tint="@color/grey_text"
+                android:onClick="onDelete"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_seven"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_7" />
+
+            <Button
+                android:id="@+id/btn_eight"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_8" />
+
+            <Button
+                android:id="@+id/btn_nine"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_9" />
+
+            <Button
+                android:id="@+id/btn_multiple"
+                style="@style/TextInButton.Button.GreyText"
+                android:text="@string/multiple" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_four"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_4" />
+
+            <Button
+                android:id="@+id/btn_five"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_5" />
+
+            <Button
+                android:id="@+id/btn_six"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_6" />
+
+            <Button
+                android:id="@+id/btn_minus"
+                style="@style/TextInButton.Button.GreyText"
+                android:text="@string/minus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_one"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_1" />
+
+            <Button
+                android:id="@+id/btn_two"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_2" />
+
+            <Button
+                android:id="@+id/btn_three"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_3" />
+
+            <Button
+                android:id="@+id/btn_plus"
+                style="@style/TextInButton.Button.GreyText"
+                android:text="@string/plus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_zero"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_0" />
+
+            <Button
+                android:id="@+id/btn_doubleZero"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/_00" />
+
+            <Button
+                android:id="@+id/btn_dot"
+                style="@style/TextInButton.Button.White_Text"
+                android:text="@string/dot" />
+
+            <Button
+                android:id="@+id/btn_equals"
+                style="@style/TextInButton.Button"
+                android:textColor="@color/grey_text"
+                android:onClick="onEqual"
+                android:text="@string/equals" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
